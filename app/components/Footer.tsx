@@ -5,16 +5,9 @@ import { ArrowRight } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="px-6 md:px-16 lg:px-20 mt-16 py-16">
+    <footer className="px-6 py-16 mt-16 md:px-16 lg:px-20">
       <div
-        className="
-          flex flex-col 
-          lg:flex-row 
-          lg:justify-between 
-          gap-10
-          items-center lg:items-start
-          text-center lg:text-left
-        "
+        className="flex flex-col items-center gap-10 text-center  lg:flex-row lg:justify-between lg:items-start lg:text-left"
       >
         {/* Logo Section */}
         <div className="flex flex-col items-center lg:items-start">
@@ -36,16 +29,7 @@ function Footer() {
 
         {/* Links Section */}
         <div
-          className="
-            grid 
-            grid-cols-1 
-            sm:grid-cols-2 
-            md:grid-cols-3 
-            gap-10 
-            w-full 
-            lg:w-3/5
-            text-center lg:text-left
-          "
+          className="grid w-full grid-cols-1 gap-10 text-center  sm:grid-cols-2 md:grid-cols-3 lg:w-3/5 lg:text-left"
         >
           {/* Column 1 */}
           <div className="flex flex-col font-normal text-sm text-[#1A1B1F] gap-3 items-center lg:items-start">
@@ -79,7 +63,7 @@ function Footer() {
       <div className="flex justify-between">
         <p className="font-normal text-sm text-[#222227]">© 2025 Ebrahim Elgendy</p>
         <div className="flex ">
-           <Link href={"/"}> <Image src={"/images/youtube.svg"} alt="youtube" width={20} height={20}/></Link>
+           <Link href={"/"}> <Image src={"/images/Youtube.svg"} alt="youtube" width={20} height={20}/></Link>
            <Link href={"/"}> <Image src={"/images/twitter.svg"} alt="twitter" width={40} height={24}/></Link>
            <Link href={"/"}> <Image src={"/images/linkedin.svg"} alt="linkedin" width={40} height={24}/></Link>
            <Link href={"/"}> <Image src={"/images/instgrame.svg"} alt="instgrame" width={40} height={24}/></Link>
