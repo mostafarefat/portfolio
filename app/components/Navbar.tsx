@@ -68,10 +68,10 @@ function Navbar() {
           <Link href={"/work"} onClick={() => setOpen(false)}>
             Work
           </Link>
-          <Link href={"/"} onClick={() => setOpen(false)}>
+          <Link href={"/blog"} onClick={() => setOpen(false)}>
             Blog
           </Link>
-          <Link href={"/blog"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
+          <Link href={"/"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
             About
           </Link>
           <Link href={"/"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
