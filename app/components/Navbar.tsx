@@ -19,13 +19,10 @@ function Navbar() {
         />
 
         {/* Desktop Links */}
-        <div className="hidden  md:hidden lg:flex gap-6 bg-[#B3B3B3]/30 font-normal  text-[#222222]/90 text-sm p-3 rounded-xl font-[roboto] ">
+        <div className="hidden  md:hidden lg:flex gap-6 bg-[#B3B3B3]/30 font-normal  text-black text-sm p-3 rounded-xl font-[roboto] ">
           <Link href={"/"}>Home</Link>
           <Link href={"/work"}>Work</Link>
-          <Link href={"/"}>Blog</Link>
-          <Link href={"/"} className="flex items-center justify-center">
-            About
-          </Link>
+          <Link href={"/blog"}>Blog</Link>
           <Link href={"/"} className="flex items-center justify-center">
             About
           </Link>
@@ -74,7 +71,7 @@ function Navbar() {
           <Link href={"/"} onClick={() => setOpen(false)}>
             Blog
           </Link>
-          <Link href={"/"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
+          <Link href={"/blog"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
             About
           </Link>
           <Link href={"/"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
