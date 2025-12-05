@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       {/* ------------ NAVBAR ------------ */}
-      <nav className="flex items-center justify-between pt-6 mx-5 md:mx-20">
+      <nav className="flex items-center lg:mx-10 justify-between pt-6 mx-5 md:mx-20">
         <Image
           src={"/images/Vectorized.svg"}
           alt="logo"
@@ -19,9 +19,9 @@ function Navbar() {
         />
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-6 bg-[#B3B3B3]/30 font-normal  text-[#222222]/90 text-sm p-3 rounded-xl font-[roboto] ">
+        <div className="hidden  md:hidden lg:flex gap-6 bg-[#B3B3B3]/30 font-normal  text-[#222222]/90 text-sm p-3 rounded-xl font-[roboto] ">
           <Link href={"/"}>Home</Link>
-          <Link href={"/"}>Work</Link>
+          <Link href={"/work"}>Work</Link>
           <Link href={"/"}>Blog</Link>
           <Link href={"/"} className="flex items-center justify-center">
             About
@@ -35,7 +35,7 @@ function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="lg:hidden"
           onClick={() => setOpen(true)}
         >
           <Menu className="w-7 h-7 text-[#222]" />
@@ -64,11 +64,11 @@ function Navbar() {
         </button>
 
         {/* Links */}
-        <div className="flex flex-col gap-4 text-base font-normal text-[#222222]/90 font-[roboto] ">
+        <div className="flex flex-col gap-4 text-base font-normal text-[#222222]/90 font-[roboto]  ">
           <Link href={"/"} onClick={() => setOpen(false)}>
             Home
           </Link>
-          <Link href={"/"} onClick={() => setOpen(false)}>
+          <Link href={"/work"} onClick={() => setOpen(false)}>
             Work
           </Link>
           <Link href={"/"} onClick={() => setOpen(false)}>

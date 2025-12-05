@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Services() {
   return (
-    <div className="bg-[url('/images/bg.png')] bg-cover bg-center bg-no-repeat h-full py-16 px-20 max-[1024px]:px-10 max-[640px]:px-5">
+    <div className="bg-[url('/images/bg.png')] bg-cover bg-center bg-no-repeat h-full py-16  lg:px-20  max-[1024px]:px-0 max-[640px]-auto">
         
         <h2 className='text-4xl font-semibold text-center text-white font-[inter-tight]'>
           My Services
@@ -21,7 +21,7 @@ function Services() {
             max-[900px]:grid
             max-[900px]:grid-cols-2
             max-[900px]:gap-8
-            max-[900px]:px-10
+            max-[900px]:px-6
 
             max-[600px]:grid-cols-1
             max-[600px]:gap-6

@@ -4,10 +4,10 @@ import Image from 'next/image'
 function Hero() {
   return (
     <section className="overflow-hidden">
-      <div className="px-6 py-10 md:px-12 lg:px-30">
+      <div className="px-4 py-6  md:px-12 lg:px-20 lg:mt-30 ">
 
         {/* --- Heading inline --- */}
-        <div className="flex items-center justify-center gap-4 mb-4 lg:justify-start">
+        <div className="flex items-center justify-cente gap-4 mb-4 lg:justify-start">
           <Image
             src="/images/home.svg"
             alt="Home Icon"
@@ -16,7 +16,7 @@ function Hero() {
             className="w-10 md:w-14 lg:w-[70px]"
           />
 
-          <h2 className="text-2xl font-semibold md:text-4xl lg:text-6xl xl:text-[75px] whitespace-nowrap">
+          <h2 className="text-2xl font-semibold md:text-5xl lg:text-6xl xl:text-[75px] whitespace-nowrap">
             Hi, I’m Ebrahim Elgendy
           </h2>
 
@@ -30,7 +30,7 @@ function Hero() {
         </div>
 
         {/* --- All text in ONE line --- */}
-        <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 font-semibold text-2xl md:text-4xl lg:text-[56px] xl:text-[70px] leading-tight">
+        <div className="flex flex-wrap justify-start lg:justify-start items-center gap-4 font-semibold text-[26px] md:text-5xl lg:text-[56px] xl:text-[70px] leading-tight">
 
           <p className="text-transparent bg-linear-to-b from-black/40 to-black/15 bg-clip-text whitespace-nowrap">
             Product Designer & Solopreneur
@@ -74,17 +74,22 @@ function Hero() {
       </div>
 
       {/* Main photo */}
-      <Image
-        src="/images/img.svg"
-        alt="Main Hero Image"
-        width={1000}
-        height={900}
-        className="rounded-[40px] md:rounded-[60px] lg:rounded-[100px] w-full h-auto mt-10"
-      />
+   <Image
+  src="/images/ibrahim1.png"
+  alt="Main Hero Image"
+  width={1440}
+  height={500}
+  className="
+    rounded-[40px] md:rounded-[60px] lg:rounded-[100px]
+    h-auto mt-20 
+    object-cover 
+    object-[center_20%]
+  "
+/>
+
     </section>
   )
 }
 
 export default Hero
-
 

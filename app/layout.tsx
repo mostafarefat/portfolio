@@ -6,16 +6,19 @@ import Footer from "./components/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
+  weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
 });
 
 const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
+  variable: "--font-Inter-Tight",
+  weight: ["300", "400", "500", "700","600"],
   subsets: ["latin"],
 });
 
 const caveat = Caveat({
   variable: "--font-caveat",
+  weight: [ "400", "500", "700"],
   subsets: ["latin"],
 });
 

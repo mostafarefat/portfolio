@@ -1,15 +1,15 @@
-import Guides from "./components/Guides";
+import Articles from "./components/Articles";
 import Hero from "./components/Hero";
-import ResourcesCard from "./components/ResourcesCard";
+import ProjectCard from "./components/ProjectCard";
 import Services from "./components/Services";
 
 export default function Home() {
   return (
     <div>
       <Hero/>
-      <ResourcesCard/>
+      <ProjectCard/>
       <Services/>
-      <Guides/>
+      <Articles/>
     </div>
   );
 }
