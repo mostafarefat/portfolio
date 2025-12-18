@@ -5,10 +5,10 @@ import Link from "next/link";
 function ProjectCard() {
   return (
     <section className="px-4 py-16 md:px-4 lg:px-20">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#222227] font-[inter-tight]">
+      <h2 className="text-3xl md:text-4xl font-normal text-center text-[#222227] font-sans ">
         My Projects
       </h2>
-      <p className="font-normal font-[satoshi] text-base text-[#6B6B6B] text-center mt-3 mb-8">
+      <p className="font-normal  text-base text-[#6B6B6B] text-center mt-3 mb-8">
         A curated collection of my most impactful projects.
       </p>
 
@@ -46,14 +46,6 @@ function ProjectCard() {
             App Design
           </Link>
         </li>
-        <li>
-          <Link
-            className="bg-[#B3B3B3]/30 py-2 px-4 rounded-xl block text-center whitespace-nowrap"
-            href={"#"}
-          >
-            Graphic Design
-          </Link>
-        </li>
       </ul>
 
       {/* Cards */}
@@ -71,7 +63,7 @@ function ProjectCard() {
           <p className="text-xl font-medium text-[#111827] mb-4 mt-2 ">
             Web Design
           </p>
-          <p className="text-2xl font-medium font-[inter-tight] ">
+          <p className="text-2xl font-normal font-[inter-tight] ">
             Air Calling Landing Page Design
           </p>
         </div>
@@ -89,7 +81,7 @@ function ProjectCard() {
           <p className="text-xl font-medium text-[#111827] mb-4 mt-2 ">
             Web Design
           </p>
-          <p className="text-2xl font-medium font-[inter-tight] ">
+          <p className="text-2xl font-normal font-[inter-tight] ">
             Business Landing Page Design
           </p>
         </div>
@@ -107,7 +99,7 @@ function ProjectCard() {
           <p className="text-xl font-medium text-[#111827] mb-4 mt-2 ">
             Web Design
           </p>
-          <p className="text-2xl font-medium font-[inter-tight] ">
+          <p className="text-2xl font-normal ">
             Ecom Web Page Design
           </p>
         </div>

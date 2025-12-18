@@ -8,7 +8,7 @@ function Footer() {
     <footer className="px-6 py-16 mt-16 md:px-16 lg:px-20 ">
       <div className="flex flex-col items-start gap-10 md:items-start lg:flex-row lg:justify-between lg:items-start lg:text-left ">
         {/* Logo Section */}
-        <div className="flex flex-col  lg:items-center   ">
+        <div className="flex flex-col lg:items-center ">
           <Image
             src={"/images/Vectorized.svg"}
             alt="logo"
@@ -21,32 +21,32 @@ function Footer() {
             alt="logo"
             width={100}
             height={110}
-            className="mt-3 hidden lg:block"
+            className="hidden mt-3 lg:block"
           />
         </div>
 
         {/* Links Section */}
-        <div className="grid w-full grid-cols-1 gap-10 text-center   sm:grid-cols-2 md:grid-cols-3 lg:w-3/5 lg:text-left">
+        <div className="grid w-full grid-cols-1 gap-10 text-center sm:grid-cols-2 md:grid-cols-3 lg:w-3/5 lg:text-left">
           {/* Column 1 */}
           <div className="flex flex-col font-normal text-sm text-[#1A1B1F] gap-3 items-start lg:items-start">
-            <p className="text-[#6B6B6B] font-medium">HALLO</p>
-            <Link href={"/"}>About</Link>
-            <Link href={"/"}>Newsletter</Link>
-            <Link href={"/"}>Contact</Link>
+            <p className="text-[#6B6B6B] font-normal">HALLO</p>
+            <Link href={"/about"}>About</Link>
+            <Link href={"/blog"}>Newsletter</Link>
+            <Link href={"/contact"}>Contact</Link>
             <Link href={"/"}>FAQ</Link>
           </div>
 
           {/* Column 2 */}
           <div className="flex flex-col font-normal text-sm text-[#1A1B1F] gap-3 items-start lg:items-start">
-            <p className="text-[#6B6B6B] font-medium">SERVICES</p>
-            <Link href={"/"}>Product Design</Link>
+            <p className="text-[#6B6B6B] font-normal">SERVICES</p>
+            <Link href={"/work"}>Product Design</Link>
             <Link href={"/"}>Webflow Development</Link>
             <Link href={"/"}>Speaking</Link>
           </div>
 
           {/* Column 3 */}
           <div className="flex flex-col font-normal text-sm text-[#1A1B1F] gap-3 items-start lg:items-start md:text-start ">
-            <p className="text-[#6B6B6B] font-medium">Resources</p>
+            <p className="text-[#6B6B6B] font-normal">Resources</p>
             <Link href={"/"}>The Creative Freelancer Kit</Link>
             <Link href={"/"}>Resume Kit for UI/UX Designers</Link>
             <Link href={"/"}>UI/UX Design Learning Roadmap</Link>

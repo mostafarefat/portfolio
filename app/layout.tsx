@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Inter_Tight, Caveat } from "next/font/google";
+import { Roboto, Inter_Tight, Caveat , Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,15 +11,18 @@ const roboto = Roboto({
 });
 
 const interTight = Inter_Tight({
-  variable: "--font-Inter-Tight",
   weight: ["300", "400", "500", "700","600"],
   subsets: ["latin"],
 });
 
 const caveat = Caveat({
-  variable: "--font-caveat",
   weight: [ "400", "500", "700"],
   subsets: ["latin"],
+});
+
+const robotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["300", "400", "700","600" ,"500"], // اختار الأوزان اللي هتستخدمها
 });
 
 export const metadata: Metadata = {
@@ -32,9 +35,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${roboto.variable} ${interTight.variable} ${caveat.variable}`}>
-      <body>
+    <html lang="en" className={`${roboto.className} ${interTight.className} ${caveat.className} ${robotoCondensed.className}`}>
+      <body className="bg-[url('/images/bg2.WEBP')]  bg-[#fdfcf9]  h-full ">
+      <div className="pb-24">
         <Navbar/>
+      </div>
+        
         {children}
         <Footer/>
       </body>

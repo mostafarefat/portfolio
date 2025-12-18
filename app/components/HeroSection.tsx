@@ -44,7 +44,7 @@ function HeroSection() {
     <div className="px-2 md:px-2 lg:px-20 ">
       {/* Hero Title */}
       <div className="py-20 md:py-28">
-        <h2 className="font-[inter-tight] font-normal text-7xl sm:text-6xl md:text-7xl lg:text-9xl text-black leading-tight">
+        <h2 className="font-[inter] font-medium text-7xl sm:text-6xl md:text-7xl lg:text-9xl text-black leading-tight">
           Good design is{" "}
           <span className="text-transparent bg-linear-to-b from-black/40 to-black/15 bg-clip-text">
             invisible.

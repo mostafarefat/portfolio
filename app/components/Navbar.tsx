@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       {/* ------------ NAVBAR ------------ */}
-      <nav className="flex items-center lg:mx-10 justify-between pt-6 mx-5 md:mx-20">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 pt-0 bg-white shadow-lg lg:mx-10 md:px-6 lg:bg-transparent lg:shadow-none lg:pt-3">
         <Image
           src={"/images/Vectorized.svg"}
           alt="logo"
@@ -19,15 +19,15 @@ function Navbar() {
         />
 
         {/* Desktop Links */}
-        <div className="hidden  md:hidden lg:flex gap-6 bg-[#B3B3B3]/30 font-normal  text-black text-sm p-3 rounded-xl font-[roboto] ">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/work"}>Work</Link>
-          <Link href={"/blog"}>Blog</Link>
-          <Link href={"/"} className="flex items-center justify-center">
+        <div className="hidden  md:hidden lg:flex  bg-[#B3B3B3]/15 font-medium  text-[#222222] text-sm p-3 rounded-xl gap-6 ">
+          <Link href={"/"} >Home</Link>
+          <Link href={"/work"} >Work</Link>
+          <Link href={"/blog"} >Blog</Link>
+          <Link href={"/about"} >
             About
           </Link>
-          <Link href={"/"}>NoteBook</Link>
-          <Link href={"/"}>Contact</Link>
+          <Link href={"/notebook"} >NoteBook</Link>
+          <Link href={"/contact"} >Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -49,7 +49,7 @@ function Navbar() {
 
       {/* ------------ SIDEBAR ------------ */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 p-6 transform transition-transform duration-300 
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 p-6 transform transition-transform duration-300  
           ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Close Button */}
@@ -71,13 +71,13 @@ function Navbar() {
           <Link href={"/blog"} onClick={() => setOpen(false)}>
             Blog
           </Link>
-          <Link href={"/"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
+          <Link href={"/about"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
             About
           </Link>
-          <Link href={"/"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
+          <Link href={"/notebook"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
             Notebook
           </Link>
-            <Link href={"/"} onClick={() => setOpen(false)}>
+            <Link href={"/contact"} onClick={() => setOpen(false)}>
             Contact
           </Link>
         </div>

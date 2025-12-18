@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function ArchiveGallery() {
   return (
-    <div className="mt-20 px-2 md:px-10 lg:px-20">
+    <div className="px-2 mt-20 md:px-10 lg:px-20">
       <p className="text-base font-[satoshi] text-[#6B6B6B]">
         An archive of products I’ve designed.
       </p>
@@ -31,14 +31,14 @@ function ArchiveGallery() {
       </div>
 
       {/* SECOND ROW */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+      <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
         <Image src="/images/screen2.png" alt="img" width={385} height={414} className="w-full h-auto" />
         <Image src="/images/screen3.png" alt="img" width={385} height={414} className="w-full h-auto" />
         <Image src="/images/screen4.png" alt="img" width={385} height={414} className="w-full h-auto" />
       </div>
 
       {/* THIRD ROW */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4 items-center">
+      <div className="grid items-center grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
         <p className="font-[satoshi] text-2xl text-[#494949] leading-relaxed max-w-[500px]">
           From consumer-facing apps with millions of users, to web apps for
           businesses of all sizes—I’ve done it all. This means I can quickly
@@ -49,7 +49,7 @@ function ArchiveGallery() {
         <Image
           src="/images/screen5.png"
           alt="img"
-          width={790}
+          width={720}
           height={615}
           className="w-full h-auto"
         />
@@ -63,7 +63,7 @@ function ArchiveGallery() {
         </div>
 
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
             <Image src="/images/screen8.png" alt="img" width={385} height={300} className="w-full h-auto" />
             <Image src="/images/screen9.png" alt="img" width={385} height={300} className="w-full h-auto" />
           </div>

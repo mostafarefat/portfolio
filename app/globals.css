@@ -1,2 +1,7 @@
 @import "tailwindcss";
-
+*{
+  font-family: "roboto" , sans-serif ;
+}
+.mark{
+  font-family: "caveat";
+}
