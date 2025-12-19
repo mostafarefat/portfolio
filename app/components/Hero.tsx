@@ -36,7 +36,7 @@ function Hero() {
         // Small screens (sm and below)
         return {
           threshold: 0.1,
-          rootMargin: "0px 0px -800px 0px",
+          rootMargin: "0px 0px -750px 0px",
         };
       }
     };
@@ -117,10 +117,10 @@ function Hero() {
             alt="Home Icon"
             width={70}
             height={80}
-            className="w-10 md:w-14 lg:w-[70px]"
+            className="w-8 md:w-14 lg:w-[70px]"
           />
 
-          <h2 className="text-2xl font-normal md:text-5xl lg:text-6xl xl:text-[80px] whitespace-nowrap font-sans ">
+          <h2 className="text-[22px] font-normal md:text-5xl lg:text-6xl xl:text-[80px] whitespace-nowrap font-sans ">
             Hi, I&apos;m Ebrahim Elgendy
           </h2>
 
@@ -134,7 +134,7 @@ function Hero() {
         </div>
 
         {/* --- All text in ONE line --- */}
-        <div className="flex flex-wrap justify-start lg:justify-start items-center gap-4 font-normal text-[27px] md:text-5xl lg:text-[60px] xl:text-[78px] leading-tight font-sans">
+        <div className="flex flex-wrap justify-start lg:justify-start items-center gap-4 font-normal text-[25px] md:text-5xl lg:text-[60px] xl:text-[78px] leading-tight font-sans">
           <p
             ref={(el) => {
               paragraphRefs.current[0] = el;
