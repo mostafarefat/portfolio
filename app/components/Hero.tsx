@@ -1,7 +1,112 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 function Hero() {
+  const paragraphRefs = useRef<
+    (HTMLParagraphElement | HTMLDivElement | null)[]
+  >([]);
+  const [visibleParagraphs, setVisibleParagraphs] = useState<Set<number>>(
+    new Set()
+  );
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    let innerRafId: number | null = null;
+
+    // Function to get responsive observer options based on screen size
+    const getObserverOptions = () => {
+      const width = window.innerWidth;
+
+      // Tailwind breakpoints: sm: 640px, md: 768px, lg: 1024px
+      if (width >= 1024) {
+        // Large screens (lg and above)
+        return {
+          threshold: 0.3,
+          rootMargin: "0px 0px -250px 0px",
+        };
+      } else if (width >= 768) {
+        // Medium screens (md)
+        return {
+          threshold: 0.2,
+          rootMargin: "0px 0px -850px 0px",
+        };
+      } else {
+        // Small screens (sm and below)
+        return {
+          threshold: 0.1,
+          rootMargin: "0px 0px -800px 0px",
+        };
+      }
+    };
+
+    // Function to setup observers
+    const setupObservers = () => {
+      // Disconnect existing observers
+      observers.forEach((observer) => observer.disconnect());
+      observers.length = 0;
+
+      const options = getObserverOptions();
+
+      paragraphRefs.current.forEach((ref, index) => {
+        if (!ref) return;
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            setVisibleParagraphs((prev) => {
+              const newSet = new Set(prev);
+              if (entry.isIntersecting) {
+                // Add paragraph to visible set when it enters the viewport
+                newSet.add(index);
+              } else {
+                // Remove paragraph from visible set when it leaves the viewport
+                newSet.delete(index);
+              }
+              return newSet;
+            });
+          });
+        }, options);
+
+        observer.observe(ref);
+        observers.push(observer);
+      });
+    };
+
+    // Use requestAnimationFrame to ensure DOM is ready and refs are populated
+    const rafId = requestAnimationFrame(() => {
+      // Double RAF to ensure layout is complete
+      innerRafId = requestAnimationFrame(() => {
+        setupObservers();
+      });
+    });
+
+    // Handle window resize to adjust observer settings for different screen sizes
+    let resizeTimeout: NodeJS.Timeout | null = null;
+    const handleResize = () => {
+      // Debounce resize events
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        setupObservers();
+      }, 150);
+    };
+
+    window.addEventListener("resize", handleResize, { passive: true });
+
+    // Cleanup function
+    return () => {
+      cancelAnimationFrame(rafId);
+      if (innerRafId !== null) {
+        cancelAnimationFrame(innerRafId);
+      }
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      window.removeEventListener("resize", handleResize);
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
+  const isVisible = (index: number) => visibleParagraphs.has(index);
+
   return (
     <section className="overflow-hidden">
       <div className="px-4 py-6 md:px-12 lg:px-20 lg:mt-30 ">
@@ -16,7 +121,7 @@ function Hero() {
           />
 
           <h2 className="text-2xl font-normal md:text-5xl lg:text-6xl xl:text-[80px] whitespace-nowrap font-sans ">
-            Hi, I’m Ebrahim Elgendy
+            Hi, I&apos;m Ebrahim Elgendy
           </h2>
 
           <Image
@@ -30,11 +135,37 @@ function Hero() {
 
         {/* --- All text in ONE line --- */}
         <div className="flex flex-wrap justify-start lg:justify-start items-center gap-4 font-normal text-[27px] md:text-5xl lg:text-[60px] xl:text-[78px] leading-tight font-sans">
-          <p className="text-transparent bg-linear-to-b from-black/40 to-black/15 bg-clip-text whitespace-nowrap">
+          <p
+            ref={(el) => {
+              paragraphRefs.current[0] = el;
+            }}
+            className="whitespace-nowrap transition-all duration-1000 ease-in-out"
+            style={{
+              color: "transparent",
+              backgroundImage: isVisible(0)
+                ? "linear-gradient(to bottom, black, black)"
+                : "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15))",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+            }}
+          >
             Product Designer & Solopreneur
           </p>
 
-          <div className="flex items-center gap-2 text-transparent whitespace-nowrap bg-linear-to-b from-black/40 to-black/15 bg-clip-text">
+          <div
+            ref={(el) => {
+              paragraphRefs.current[1] = el;
+            }}
+            className="flex items-center gap-2 whitespace-nowrap transition-all duration-1000 ease-in-out"
+            style={{
+              color: "transparent",
+              backgroundImage: isVisible(1)
+                ? "linear-gradient(to bottom, black, black)"
+                : "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15))",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+            }}
+          >
             <Image
               src="/images/star.svg"
               alt="Star Icon"
@@ -45,7 +176,20 @@ function Hero() {
             Crafting clean, delightful user
           </div>
 
-          <div className="flex items-center gap-2 text-transparent whitespace-nowrap bg-linear-to-b from-black/40 to-black/15 bg-clip-text">
+          <div
+            ref={(el) => {
+              paragraphRefs.current[2] = el;
+            }}
+            className="flex items-center gap-2 whitespace-nowrap transition-all duration-1000 ease-in-out"
+            style={{
+              color: "transparent",
+              backgroundImage: isVisible(2)
+                ? "linear-gradient(to bottom, black, black)"
+                : "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15))",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+            }}
+          >
             experiences
             <Image
               src="/images/blan.svg"
@@ -57,7 +201,20 @@ function Hero() {
             Helping people
           </div>
 
-          <div className="flex items-center gap-2 text-transparent whitespace-nowrap bg-linear-to-b from-black/40 to-black/15 bg-clip-text">
+          <div
+            ref={(el) => {
+              paragraphRefs.current[3] = el;
+            }}
+            className="flex items-center gap-2 whitespace-nowrap transition-all duration-1000 ease-in-out"
+            style={{
+              color: "transparent",
+              backgroundImage: isVisible(3)
+                ? "linear-gradient(to bottom, black, black)"
+                : "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15))",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+            }}
+          >
             to increase their value
             <Image
               src="/images/party.svg"

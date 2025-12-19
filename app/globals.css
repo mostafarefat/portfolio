@@ -5,3 +5,13 @@
 .mark{
   font-family: "caveat";
 }
+
+.mo{
+  padding: 7px 12px;
+}
+.mo:hover{
+  box-shadow: 1px 1px 3px 1px #00000033 inset;
+  border-radius: 12px;
+  background: linear-gradient(115.34deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.7) 100%);
+
+}

@@ -19,15 +19,13 @@ function Navbar() {
         />
 
         {/* Desktop Links */}
-        <div className="hidden  md:hidden lg:flex  bg-[#B3B3B3]/15 font-medium  text-[#222222] text-sm p-3 rounded-xl gap-6 ">
-          <Link href={"/"} >Home</Link>
-          <Link href={"/work"} >Work</Link>
-          <Link href={"/blog"} >Blog</Link>
-          <Link href={"/about"} >
-            About
-          </Link>
-          <Link href={"/notebook"} >NoteBook</Link>
-          <Link href={"/contact"} >Contact</Link>
+        <div className="hidden  md:hidden lg:flex  bg-[#B3B3B3]/15 font-medium  text-[#222222] text-sm py-1.5 px-2 rounded-xl gap- ">
+        <Link href={"/"} className="mo">Home</Link>
+        <Link href={"/work"} className="mo">Work</Link>
+        <Link href={"/blog"} className="mo">Blog</Link>
+        <Link href={"/about"} className="mo">About</Link>
+        <Link href={"/notebook"} className="mo">NoteBook</Link>
+        <Link href={"/contact"} className="mo">Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
