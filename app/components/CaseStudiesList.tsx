@@ -8,28 +8,28 @@ import GotAproject from './GotAproject';
 
 const cases = [
   {
-    id: 1,
+    id: "afeed",
     img: "/images/case1.png",
     title: "Afeed platform",
     text: "Designing  EdTech Social-driven Learningexperience for Arabian Creators with users.",
     button: "Read the case study",
   },
   {
-    id: 2,
+    id: "carly",
     img: "/images/case2.png",
     title: "carly platform",
     text: "Carly is a platform/brand focused on car sales or automotive services in the Saudi market",
     button: "Read the case study",
   },
   {
-    id: 3,
+    id: "mazzad",
     img: "/images/case3.png",
     title: "Offer mazad",
     text: "Streamlining operations for a cutting-edge car auction app.",
     button: "Read the case study",
   },
   {
-    id: 4,
+    id: "wazna",
     img: "/images/case4.png",
     title: "Evelife app",
     text: "EveLife is a health app offering personalized insights and support for women.",
@@ -39,14 +39,14 @@ const cases = [
 
 const caseTow = [
   {
-    id: 5,
+    id: "sideup",
     img: "/images/case5.png",
     title: "Wazna app",
     text: "A culturally  platform for nutrition, fitness,and lifestyle designed for the MENA region",
     button: "Sneak peek",
   },
   {
-    id: 6,
+    id: "kashat",
     img: "/images/case6.png",
     title: "Sideup platform",
     text: "Sideup Platform links e-commerce businesses with shipping providers.",
