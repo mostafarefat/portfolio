@@ -29,7 +29,7 @@ const cases = [
     button: "Read the case study",
   },
   {
-    id: "wazna",
+    id: "kashat",
     img: "/images/case4.png",
     title: "Evelife app",
     text: "EveLife is a health app offering personalized insights and support for women.",
@@ -39,14 +39,14 @@ const cases = [
 
 const caseTow = [
   {
-    id: "sideup",
+    id: "wazna",
     img: "/images/case5.png",
     title: "Wazna app",
     text: "A culturally  platform for nutrition, fitness,and lifestyle designed for the MENA region",
     button: "Sneak peek",
   },
   {
-    id: "kashat",
+    id: "sideup",
     img: "/images/case6.png",
     title: "Sideup platform",
     text: "Sideup Platform links e-commerce businesses with shipping providers.",

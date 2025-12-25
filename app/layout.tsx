@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.className} ${interTight.className} ${caveat.className} ${robotoCondensed.className}`}>
       <body className="bg-[url('/images/bg2.WEBP')]  bg-[#fdfcf9]  h-full ">
-      <div className="pb-24">
+      <div className="pb-15 md:pb-15 lg:pb-24">
         <Navbar/>
       </div>
         
