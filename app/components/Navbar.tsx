@@ -82,7 +82,7 @@ function Navbar() {
         <button className="mb-6" onClick={() => setOpen(false)}></button>
 
         {/* Links */}
-        <div className="flex flex-col gap-8 text-xl font-normal  text-[#222222]/90 font-[roboto]  ">
+        <div className="flex flex-col gap-8 text-lg font-medium  text-[#222222]/90 font-[roboto]  ">
           <Link
             href={"/"}
             onClick={() => setOpen(false)}
