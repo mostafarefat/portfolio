@@ -21,7 +21,7 @@ function Articles() {
         <li>
           <Link href="/article">
             <Image
-              src="/images/Component1.png"
+              src="/images/card7.svg"
               alt="card"
               width={0}
               height={0}
@@ -34,7 +34,7 @@ function Articles() {
         <li>
           <Link href="/article">
             <Image
-              src="/images/Component2.png"
+              src="/images/card8.svg"
               alt="card"
               width={0}
               height={0}
@@ -47,7 +47,7 @@ function Articles() {
         <li>
           <Link href="/article">
             <Image
-              src="/images/Component3.png"
+              src="/images/Card9.svg"
               alt="card"
               width={0}
               height={0}

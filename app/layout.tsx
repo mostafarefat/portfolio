@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Roboto, Inter_Tight, Caveat , Roboto_Condensed } from "next/font/google";
+import {
+  Roboto,
+  Inter_Tight,
+  Caveat,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,22 +15,22 @@ const roboto = Roboto({
 });
 
 const interTight = Inter_Tight({
-  weight: ["300", "400", "500", "700","600"],
+  weight: ["300", "400", "500", "700", "600"],
   subsets: ["latin"],
 });
 
 const caveat = Caveat({
-  weight: [ "400", "500", "700"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
-const robotoCondensed = Roboto_Condensed({
-  subsets: ["latin"],
-  weight: ["300", "400", "700","600" ,"500"], // اختار الأوزان اللي هتستخدمها
-});
+
 
 export const metadata: Metadata = {
   title: "Portfolio - ibrahim elgendy",
+    icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -35,16 +39,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${roboto.className} ${interTight.className} ${caveat.className} ${robotoCondensed.className}`}>
+    <html
+      lang="en"
+      className={`${roboto.className} ${interTight.className} ${caveat.className} `}
+    >
       <body className="bg-[url('/images/bg2.WEBP')]  bg-[#fdfcf9]  h-full ">
-      <div className="pb-15 md:pb-15 lg:pb-24">
-        <Navbar/>
-      </div>
-        
+        <div className="pb-15 md:pb-15 lg:pb-24">
+          <Navbar />
+        </div>
+
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
 }
-

@@ -23,20 +23,20 @@ function Hero() {
       if (width >= 1024) {
         // Large screens (lg and above)
         return {
-          threshold: 0.3,
-          rootMargin: "0px 0px -250px 0px",
+         
+          rootMargin: "0px 0px -300px 0px",
         };
       } else if (width >= 768) {
         // Medium screens (md)
         return {
-          threshold: 0.2,
-          rootMargin: "0px 0px -850px 0px",
+         
+          rootMargin: "0px 0px -900px 0px",
         };
       } else {
         // Small screens (sm and below)
         return {
-          threshold: 0.1,
-          rootMargin: "0px 0px -750px 0px",
+          
+          rootMargin: "0px 0px -800px 0px",
         };
       }
     };
@@ -139,7 +139,7 @@ function Hero() {
             ref={(el) => {
               paragraphRefs.current[0] = el;
             }}
-            className="whitespace-nowrap transition-all duration-1000 ease-in-out"
+            className="transition-all duration-1000 ease-in-out whitespace-nowrap"
             style={{
               color: "transparent",
               backgroundImage: isVisible(0)
@@ -156,7 +156,7 @@ function Hero() {
             ref={(el) => {
               paragraphRefs.current[1] = el;
             }}
-            className="flex items-center gap-2 whitespace-nowrap transition-all duration-1000 ease-in-out"
+            className="flex items-center gap-2 transition-all duration-1000 ease-in-out whitespace-nowrap"
             style={{
               color: "transparent",
               backgroundImage: isVisible(1)
@@ -180,7 +180,7 @@ function Hero() {
             ref={(el) => {
               paragraphRefs.current[2] = el;
             }}
-            className="flex items-center gap-2 whitespace-nowrap transition-all duration-1000 ease-in-out"
+            className="flex items-center gap-2 transition-all duration-1000 ease-in-out whitespace-nowrap"
             style={{
               color: "transparent",
               backgroundImage: isVisible(2)
@@ -205,7 +205,7 @@ function Hero() {
             ref={(el) => {
               paragraphRefs.current[3] = el;
             }}
-            className="flex items-center gap-2 whitespace-nowrap transition-all duration-1000 ease-in-out"
+            className="flex items-center gap-2 transition-all duration-1000 ease-in-out whitespace-nowrap"
             style={{
               color: "transparent",
               backgroundImage: isVisible(3)

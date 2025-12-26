@@ -15,4 +15,9 @@
   background: linear-gradient(115.34deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.7) 100%);
 
 }
+.mos{
+  background: var(--color-grey-7010, #B3B3B31A);
+  backdrop-filter: blur(18px)
+
+}
 
