@@ -36,7 +36,7 @@ function Hero() {
         // Small screens (sm and below)
         return {
           
-          rootMargin: "0px 0px -650px 0px",
+          rootMargin: "0px 0px -600px 0px",
         };
       }
     };
