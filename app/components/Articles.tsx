@@ -47,7 +47,7 @@ function Articles() {
         <li>
           <Link href="/article">
             <Image
-              src="/images/Card9.svg"
+              src="/images/card9.svg"
               alt="card"
               width={0}
               height={0}
