@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu , X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -11,28 +11,39 @@ function Navbar() {
     <>
       {/* ------------ NAVBAR ------------ */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 pt-0 bg-white shadow-lg lg:mx-10 md:px-6 lg:bg-transparent lg:shadow-none lg:pt-3">
-        <Image
-          src={"/images/Vectorized.svg"}
-          alt="logo"
-          width={65}
-          height={60}
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/images/Vectorized.svg"}
+            alt="logo"
+            width={65}
+            height={60}
+          />
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden  md:hidden lg:flex  bg-[#B3B3B3]/15 font-medium  text-[#222222] text-sm py-1.5 px-2 rounded-xl mos ">
-        <Link href={"/"} className="mo">Home</Link>
-        <Link href={"/work"} className="mo">Work</Link>
-        <Link href={"/blog"} className="mo">Blog</Link>
-        <Link href={"/about"} className="mo">About</Link>
-        <Link href={"/notebook"} className="mo">NoteBook</Link>
-        <Link href={"/contact"} className="mo">Contact</Link>
+          <Link href={"/"} className="mo">
+            Home
+          </Link>
+          <Link href={"/work"} className="mo">
+            Work
+          </Link>
+          <Link href={"/blog"} className="mo">
+            Blog
+          </Link>
+          <Link href={"/about"} className="mo">
+            About
+          </Link>
+          <Link href={"/notebook"} className="mo">
+            NoteBook
+          </Link>
+          <Link href={"/contact"} className="mo">
+            Contact
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden"
-          onClick={() => setOpen(true)}
-        >
+        <button className="lg:hidden" onClick={() => setOpen(true)}>
           <Menu className="w-7 h-7 text-[#222]" />
         </button>
       </nav>
@@ -51,10 +62,7 @@ function Navbar() {
           ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Close Button */}
-        <button
-          className="mb-6"
-          onClick={() => setOpen(false)}
-        >
+        <button className="mb-6" onClick={() => setOpen(false)}>
           <X className="w-7 h-7 text-[#222]" />
         </button>
 
@@ -69,13 +77,21 @@ function Navbar() {
           <Link href={"/blog"} onClick={() => setOpen(false)}>
             Blog
           </Link>
-          <Link href={"/about"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
+          <Link
+            href={"/about"}
+            className="flex items-center gap-1"
+            onClick={() => setOpen(false)}
+          >
             About
           </Link>
-          <Link href={"/notebook"} className="flex items-center gap-1" onClick={() => setOpen(false)}>
+          <Link
+            href={"/notebook"}
+            className="flex items-center gap-1"
+            onClick={() => setOpen(false)}
+          >
             Notebook
           </Link>
-            <Link href={"/contact"} onClick={() => setOpen(false)}>
+          <Link href={"/contact"} onClick={() => setOpen(false)}>
             Contact
           </Link>
         </div>
