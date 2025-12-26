@@ -30,13 +30,13 @@ function Hero() {
         // Medium screens (md)
         return {
          
-          rootMargin: "0px 0px -200px 0px",
+          rootMargin: "0px 0px -800px 0px",
         };
       } else {
         // Small screens (sm and below)
         return {
           
-          rootMargin: "0px 0px -150px 0px",
+          rootMargin: "0px 0px -650px 0px",
         };
       }
     };
