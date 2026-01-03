@@ -26,7 +26,7 @@ function Articles() {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto mx-auto"
+              className="w-full h-auto mx-auto transition-transform duration-1000 hover:scale-105 rounded-3xl"
             />
           </Link>
         </li>
@@ -39,7 +39,7 @@ function Articles() {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto mx-auto"
+              className="w-full h-auto mx-auto transition-transform duration-1000 hover:scale-105 rounded-3xl"
             />
           </Link>
         </li>
@@ -52,7 +52,7 @@ function Articles() {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto mx-auto"
+              className="w-full h-auto mx-auto transition-transform duration-1000 hover:scale-105 rounded-3xl"
             />
           </Link>
         </li>

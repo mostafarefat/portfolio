@@ -57,13 +57,13 @@ function ProjectCard() {
               alt="card"
               width={400}
               height={490}
-              className="mx-auto"
+              className="mx-auto transition duration-1000 rounded-lg hover:scale-105"
             />
           </Link>
-          <p className="text-xl font-medium text-[#111827] mb-4 mt-2 ">
+          <p className="mt-5 mb-3 text-xl font-semibold text-gray-600 ">
             Web Design
           </p>
-          <p className="text-2xl font-normal font-[inter-tight] ">
+          <p className="text-[20px] font-normal font-[inter-tight] ">
             Air Calling Landing Page Design
           </p>
         </div>
@@ -75,13 +75,13 @@ function ProjectCard() {
               alt="card"
               width={400}
               height={490}
-              className="mx-auto"
+              className="mx-auto transition-transform duration-1000 rounded-lg hover:scale-105"
             />
           </Link>
-          <p className="text-xl font-medium text-[#111827] mb-4 mt-2 ">
+          <p className="mt-5 mb-3 text-xl font-semibold text-gray-600 ">
             Web Design
           </p>
-          <p className="text-2xl font-normal font-[inter-tight] ">
+          <p className="text-[20px] font-normal font-[inter-tight] ">
             Business Landing Page Design
           </p>
         </div>
@@ -93,13 +93,13 @@ function ProjectCard() {
               alt="card"
               width={400}
               height={490}
-              className="mx-auto"
+              className="mx-auto transition-transform duration-1000 rounded-lg hover:scale-105"
             />
           </Link>
-          <p className="text-xl font-medium text-[#111827] mb-4 mt-2 ">
+          <p className="mt-5 mb-3 text-xl font-semibold text-gray-600">
             Web Design
           </p>
-          <p className="text-2xl font-normal ">
+          <p className="text-[20px] font-normal ">
             Ecom Web Page Design
           </p>
         </div>

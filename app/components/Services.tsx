@@ -33,7 +33,7 @@ function Services() {
               alt="card"
               width={370}
               height={490}
-              className="mx-auto"
+              className="mx-auto transition-transform duration-1000 rounded-lg hover:scale-105"
             />
           </Link>
         </li>
@@ -45,7 +45,7 @@ function Services() {
               alt="card"
               width={370}
               height={490}
-              className="mx-auto"
+              className="mx-auto transition-transform duration-1000 rounded-lg hover:scale-105"
             />
           </Link>
         </li>
@@ -57,7 +57,7 @@ function Services() {
               alt="card"
               width={370}
               height={490}
-              className="mx-auto"
+              className="mx-auto transition-transform duration-1000 rounded-lg hover:scale-105"
             />
           </Link>
         </li>

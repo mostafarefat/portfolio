@@ -97,7 +97,7 @@ function CaseStudiesList() {
                     alt={item.title}
                     width={400}
                     height={400}
-                    className="w-full h-auto rounded-xl"
+                    className="w-full h-auto transition-transform duration-1000 hover:scale-103 rounded-2xl"
                   />
 
                   <p className="font-[satoshi] text-sm text-[#6B6B6B]">{item.title}</p>
@@ -128,7 +128,7 @@ function CaseStudiesList() {
                     alt={item.title}
                     width={588}
                     height={388}
-                    className="w-full h-auto rounded-xl"
+                    className="w-full h-auto transition-transform duration-1000 hover:scale-103 rounded-2xl"
                   />
 
                   <p className="font-[satoshi] text-sm text-[#6B6B6B]">{item.title}</p>

@@ -24,7 +24,7 @@ function Hero() {
         // Large screens (lg and above)
         return {
          
-          rootMargin: "0px 0px -300px 0px",
+          rootMargin: "0px 0px -250px 0px",
         };
       } else if (width >= 768) {
         // Medium screens (md)
@@ -231,7 +231,7 @@ function Hero() {
       <Image
         src="/images/ibrahim1.png"
         alt="Main Hero Image"
-        width={1440}
+        width={2000}
         height={500}
         className="
     rounded-[40px] md:rounded-[60px] lg:rounded-[100px]
